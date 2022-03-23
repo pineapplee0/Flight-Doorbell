@@ -1,0 +1,22 @@
+{
+  "name": "flight-doorbell",
+  "version": "1.0.0",
+  "description": "A physical alert method for plane spotting.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pineapplee0/Flight-Doorbell.git"
+  },
+  "author": "Katelyn Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pineapplee0/Flight-Doorbell/issues"
+  },
+  "homepage": "https://github.com/pineapplee0/Flight-Doorbell#readme",
+  "dependencies": {
+    "axios": "^0.26.0"
+  }
+}
