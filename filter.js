@@ -6,5 +6,6 @@ var rl = readline.createInterface({
 });
 
 rl.on('line', function(line){
-    console.log(line.split(",")[11]);
+  console.log('fortnite');
+  console.log(line.split(",")[11]);
 })

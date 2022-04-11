@@ -4,7 +4,13 @@ const distThresh = 10;
 const trackedAircraft = require('./flights.json');
 const notifyOnReg = [ "N500WR", "N714CB", "N5552E", "N385HA", "N178FA", "N409WN" ];
 
-console.log(trackedAircraft);
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin, 
+  output: process.stdout,
+  terminal: false
+});
+
 
 function meetsCriteria(aircraft) {
   let distance = distFrom(aircraft);
@@ -15,13 +21,18 @@ function meetsCriteria(aircraft) {
   return isSpecial ? distance : false
 }
 
-trackedAircraft.forEach((currentAircraft) => {
+rl.on('line', (line) => {
+  console.log('hello world');
+  console.log(line.split(","));
   let distance = meetsCriteria(currentAircraft)
   if (distance) {
     console.log(`Important plane detected ${distance} km away! Registration: ${currentAircraft.registration}`);
   } 
-})
+});
 
+rl.on('close', () => {
+  console.log('closed')
+})
 
 function distFrom(aircraft) {
   var homeLat = homeCoords[0]
