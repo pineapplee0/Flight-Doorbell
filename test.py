@@ -9,5 +9,6 @@ def rand(maxnum):
     return(round(random.random() * maxnum))
 
 for i in range(1,1000):
-    print("MSG,3,,,{},,,,,,,{},,,30.{},-97.{},,,0,0,0,0".format(ids[rand(len(ids)-1)], rand(20000), rand(99999), rand(99999)))
+    print("MSG,3,,,{},,,,,,,{},,,30.{},-97.{},,,0,0,0,0".format(ids[rand(len(ids)-1)], rand(20000), rand(99999), rand(99999)), flush=True)
     time.sleep(2)
+    

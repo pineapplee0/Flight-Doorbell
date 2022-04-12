@@ -2,7 +2,6 @@ const homeCoords = require('./config.json').homeCoords;
 const altThresh = 10000;
 const distThresh = 10;
 const trackedAircraft = require('./flights.json');
-const notifyOnReg = [ "N500WR", "N714CB", "N5552E", "N385HA", "N178FA", "N409WN" ];
 
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -22,9 +21,13 @@ function meetsCriteria(aircraft) {
 }
 
 rl.on('line', (line) => {
-  console.log('hello world');
-  console.log(line.split(","));
-  let distance = meetsCriteria(currentAircraft)
+  const msg = line.split(",");
+  let distance = meetsCriteria({
+    coordinatePair: [msg[16], msg[17]],
+    altitude: msg[11],
+    aircraftId: msg[10]
+  })
+
   if (distance) {
     console.log(`Important plane detected ${distance} km away! Registration: ${currentAircraft.registration}`);
   } 
