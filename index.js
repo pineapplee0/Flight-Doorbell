@@ -1,7 +1,6 @@
-const homeCoords = require('./config.json').homeCoords;
+const { homeCoords, favorites } = require('./config.json');
 const altThresh = 10000;
 const distThresh = 10;
-const trackedAircraft = require('./flights.json');
 
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -11,31 +10,33 @@ const rl = readline.createInterface({
 });
 
 
-function meetsCriteria(aircraft) {
+function checkAircraft(aircraft) {
   let distance = distFrom(aircraft);
-  let isSpecial =
-    notifyOnReg.includes(aircraft.registration) &&
-    aircraft.altitude <= altThresh &&
-    distance <= distThresh;
-  return isSpecial ? distance : false
+  let isSpecial = favorites.filter(group => {
+    return group.airframes.includes(aircraft.aircraftId)
+  }).length != 0 &&
+  aircraft.altitude <= altThresh &&
+  distance <= distThresh;
+
+  console.log(`Testing aircraft: ${JSON.stringify(aircraft)}`);
+
+  if (isSpecial) {
+    console.log(`Important plane detected ${distance} km away! Aircraft ID: ${aircraft.aircraftId}`);
+  }
 }
 
 rl.on('line', (line) => {
   const msg = line.split(",");
-  let distance = meetsCriteria({
-    coordinatePair: [msg[16], msg[17]],
+  checkAircraft({
+    coordinatePair: [msg[14], msg[15]],
     altitude: msg[11],
-    aircraftId: msg[10]
-  })
-
-  if (distance) {
-    console.log(`Important plane detected ${distance} km away! Registration: ${currentAircraft.registration}`);
-  } 
+    aircraftId: msg[4]
+  });
 });
 
 rl.on('close', () => {
   console.log('closed')
-})
+});
 
 function distFrom(aircraft) {
   var homeLat = homeCoords[0]
