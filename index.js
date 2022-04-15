@@ -1,6 +1,4 @@
-const { homeCoords, favorites } = require('./config.json');
-const altThresh = 10000;
-const distThresh = 10;
+const { homeCoords, favorites, thresholds } = require('./config.json');
 
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -9,19 +7,22 @@ const rl = readline.createInterface({
   terminal: false
 });
 
-
 function checkAircraft(aircraft) {
   let distance = distFrom(aircraft);
-  let isSpecial = favorites.filter(group => {
+
+  let matches = favorites.filter(group => {
     return group.airframes.includes(aircraft.aircraftId)
-  }).length != 0 &&
-  aircraft.altitude <= altThresh &&
-  distance <= distThresh;
+  });
+
+  let isSpecial = 
+    matches.length != 0 &&
+    aircraft.altitude <= thresholds.altitude &&
+    distance <= thresholds.distance;
 
   console.log(`Testing aircraft: ${JSON.stringify(aircraft)}`);
 
   if (isSpecial) {
-    console.log(`Important plane detected ${distance} km away! Aircraft ID: ${aircraft.aircraftId}`);
+    console.log(`Important plane detected ${distance} km away! Aircraft ID: ${aircraft.aircraftId}. Group colors: ${matches[0].colors}`);
   }
 }
 
