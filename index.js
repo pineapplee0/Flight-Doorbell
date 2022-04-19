@@ -1,27 +1,45 @@
-const homeCoords = require('./config.json').homeCoords;
-const altThresh = 10000;
-const distThresh = 10;
-const trackedAircraft = require('./flights.json');
-const notifyOnReg = [ "N500WR", "N714CB", "N5552E", "N385HA", "N178FA", "N409WN" ];
+const { homeCoords, favorites, thresholds } = require('./config.json');
 
-console.log(trackedAircraft);
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin, 
+  output: process.stdout,
+  terminal: false
+});
 
-function meetsCriteria(aircraft) {
+function checkAircraft(aircraft) {
   let distance = distFrom(aircraft);
-  let isSpecial =
-    notifyOnReg.includes(aircraft.registration) &&
-    aircraft.altitude <= altThresh &&
-    distance <= distThresh;
-  return isSpecial ? distance : false
+
+  let matches = favorites.filter(group => {
+    return group.airframes.includes(aircraft.aircraftId)
+  });
+
+  let isSpecial = 
+    matches.length != 0 &&
+    aircraft.altitude <= thresholds.altitude &&
+    distance <= thresholds.distance;
+
+  console.log(`Testing aircraft: ${JSON.stringify(aircraft)}`);
+
+  if (isSpecial) {
+    console.log(`Important plane detected ${distance} km away! Aircraft ID: ${aircraft.aircraftId}. Group colors: ${matches[0].colors}`);
+  }
 }
 
-trackedAircraft.forEach((currentAircraft) => {
-  let distance = meetsCriteria(currentAircraft)
-  if (distance) {
-    console.log(`Important plane detected ${distance} km away! Registration: ${currentAircraft.registration}`);
-  } 
-})
+rl.on('line', (line) => {
+  const msg = line.split(",");
+  if (msg[4] && msg[11] && msg[14] && msg[15]) {
+    checkAircraft({
+      coordinatePair: [parseFloat(msg[14]), parseFloat(msg[15])],
+      altitude: parseFloat(msg[11]),
+      aircraftId: msg[4]
+    });
+  }
+});
 
+rl.on('close', () => {
+  console.log('closed')
+});
 
 function distFrom(aircraft) {
   var homeLat = homeCoords[0]

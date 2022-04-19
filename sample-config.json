@@ -1,5 +1,9 @@
 {
   "homeCoords": [ 30.123456, -97.123456 ],
+  "thresholds": {
+    "altitude": 10000, 
+    "distance": 10
+  },
   "favorites": [
     {
       "groupName": "southwest",
