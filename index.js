@@ -28,11 +28,13 @@ function checkAircraft(aircraft) {
 
 rl.on('line', (line) => {
   const msg = line.split(",");
-  checkAircraft({
-    coordinatePair: [msg[14], msg[15]],
-    altitude: msg[11],
-    aircraftId: msg[4]
-  });
+  if (msg[4] && msg[11] && msg[14] && msg[15]) {
+    checkAircraft({
+      coordinatePair: [parseFloat(msg[14]), parseFloat(msg[15])],
+      altitude: parseFloat(msg[11]),
+      aircraftId: msg[4]
+    });
+  }
 });
 
 rl.on('close', () => {
