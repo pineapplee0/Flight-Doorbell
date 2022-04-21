@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/pineapplee0/Flight-Doorbell#readme",
   "dependencies": {
-    "axios": "^0.26.0",
     "play-sound": "^1.1.5"
   }
 }
