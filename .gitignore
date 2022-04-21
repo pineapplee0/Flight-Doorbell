@@ -1,3 +1,4 @@
 config.json
 node_modules/
 dump1090/
+**/.DS_Store
