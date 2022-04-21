@@ -1,5 +1,7 @@
 const { homeCoords, favorites, thresholds } = require('./config.json');
 
+const player = require('play-sound')();
+
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin, 
@@ -23,6 +25,7 @@ function checkAircraft(aircraft) {
 
   if (isSpecial) {
     console.log(`Important plane detected ${distance} km away! Aircraft ID: ${aircraft.aircraftId}. Group colors: ${matches[0].colors}`);
+    player.play('assets/chime.mp3', (err) => { if (err) throw err });
   }
 }
 
