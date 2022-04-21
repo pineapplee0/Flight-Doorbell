@@ -1,6 +1,6 @@
 const { homeCoords, favorites, thresholds } = require('./config.json');
 
-const player = require('play-sound')(opts = {});
+const player = require('play-sound')();
 
 const readline = require('readline');
 const rl = readline.createInterface({
