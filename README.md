@@ -1,7 +1,7 @@
 # Flight-Doorbell
 A physical alert method for plane spotting. Flight Doorbell is a program that you run on a Raspberry Pi to ensure that you recieve an alert for your favorite aircrafts right from your desk, bedroom, living area, etc. 
 
-As a self proclaimed "avgeek", I'm constantly on FlightRadar24 browsing for specific airlines, registrations, or aircraft types. Being near the approach path for 18R/L and depature path for 36L/R, I never miss an opporunity to run outside and see some of my favorite planes. While FlightRadar24 is a good resource for those who don't want to spend a pretty penny, it lacks a lot of information. Delayed information, lack of SOME military or general aviation aircraft due to privacy reasons, and glitched planes on the map to name a few. Using an SDR to track aircrafts via ADSB, I'm able to monitor every plane within the airspace accurately (even those who choose not to be displayed on FR24 or other flight tracking resources). 
+As a self proclaimed "avgeek", I'm constantly on FlightRadar24 browsing for specific airlines, registrations, or aircraft types. Being near the approach path for 18R/L and departure path for 36L/R, I never miss an opporunity to run outside and see some of my favorite planes. While FlightRadar24 is a good resource for those who don't want to spend a pretty penny, it lacks a lot of information. Delayed information, lack of SOME military or general aviation aircraft due to privacy reasons, and glitched planes on the map to name a few. Using an SDR to track aircrafts via ADSB, I'm able to monitor every plane within the airspace accurately (even those who choose not to be displayed on FR24 or other flight tracking resources). 
 
 
 # Why Flight Doorbell? 
