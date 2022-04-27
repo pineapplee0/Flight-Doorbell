@@ -12,12 +12,15 @@ Originally, I had planned on using FlightAware's API for Flight Doorbell. One of
 
 # How to set up Flight Doorbell
 
+This section is coming soon.
+
 # Parts List
 
 - 5.5dBi 1090/978 N-Type Female Antenna 26 inch - $44.95
 - YOTENKO 49.2Ft RG58 coaxial cable N male to SMA male connector low-loss antenna extension cable - $19.69
 - DZS Elec 2pcs RG316 wire jumper 15cm SMA female to MCX male coaxial cable antenna adapter - $9.69
 - Realtek RTL2832U SDR - $22.95
+- Raspberry Pi 2b+ - $35
 - OSEPP RGB 10mm LED (10 pack) - $3.49
 
 Total ~ $100.77
