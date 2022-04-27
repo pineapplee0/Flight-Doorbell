@@ -23,4 +23,4 @@ This section is coming soon.
 - Raspberry Pi 2b+ - $35
 - OSEPP RGB 10mm LED (10 pack) - $3.49
 
-Total ~ $100.77
+Total ~ $135.77
