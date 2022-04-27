@@ -38,6 +38,11 @@ rl.on('line', (line) => {
   const msg = line.split(",");
   if (msg[4] && msg[11] && msg[14] && msg[15]) {
     recentAircraft[msg[4]] = moment();
+    Object.keys(recentAircraft).forEach((id) => {
+      if (moment().diff(recentAircraft[id], 'seconds') >= 300) {
+        delete recentAircraft[id];
+      }
+    });
     checkAircraft({
       coordinatePair: [parseFloat(msg[14]), parseFloat(msg[15])],
       altitude: parseFloat(msg[11]),
