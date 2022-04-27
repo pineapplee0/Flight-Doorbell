@@ -2,6 +2,10 @@ const { homeCoords, favorites, thresholds } = require('./config.json');
 
 const player = require('play-sound')();
 
+const moment = require('moment');
+
+const recentAircraft = {};
+
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin, 
@@ -22,6 +26,7 @@ function checkAircraft(aircraft) {
     distance <= thresholds.distance;
 
   console.log(`Testing aircraft: ${JSON.stringify(aircraft)}`);
+  console.log(recentAircraft);
 
   if (isSpecial) {
     console.log(`Important plane detected ${distance} km away! Aircraft ID: ${aircraft.aircraftId}. Group colors: ${matches[0].colors}`);
@@ -32,6 +37,7 @@ function checkAircraft(aircraft) {
 rl.on('line', (line) => {
   const msg = line.split(",");
   if (msg[4] && msg[11] && msg[14] && msg[15]) {
+    recentAircraft[msg[4]] = moment();
     checkAircraft({
       coordinatePair: [parseFloat(msg[14]), parseFloat(msg[15])],
       altitude: parseFloat(msg[11]),
