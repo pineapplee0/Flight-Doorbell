@@ -4,10 +4,16 @@ import json
 import datetime
 import math
 
-#store credentials as var
+#store credentials as variable
 import config
 
-for line in sys.stdin
+#create recentAircraft object
+recentAircraft = {}
+
+for line in sys.stdin:
+    msg = line.split(",")
+    if (msg[4] && msg[11] && msg[14] && msg[15]):
+        recentAircraft[msg[4]] = datetime.datetime.now()
 
 def checkAircraft(aircraft):
     distance = distFrom(aircraft);
