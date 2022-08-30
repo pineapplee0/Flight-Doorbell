@@ -22,5 +22,9 @@ This section is coming soon.
 - Realtek RTL2832U SDR - $22.95
 - Raspberry Pi 2b+ - $35
 - OSEPP RGB 10mm LED (10 pack) - $3.49
+- 2 10uf electrolytic capacitor $1.32/4
+- 2 0.01 uF polyester film capacitor/0.03 $1.64/4
+- Bojack 1000 Pcs 25 Values Resistor Kit (1 Ohm-1M Ohm with 5% 1/2W) Carbon Film Resistors Assortment $14
+- 20 Pcs Copper Perfboard Paper $6.79 
 
-Total ~ $135.77
+Total ~ $159.52
