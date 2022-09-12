@@ -1,6 +1,7 @@
 # validate the distFrom function's return values and made sure that they're accurate
 
 #library imports
+from playsound import playsound
 import sys
 import json
 import datetime
@@ -41,6 +42,7 @@ def checkAircraft(aircraft):
     print(f"Testing aircraft: {json.dumps(aircraft)}");
     if (isSpecial):
         print(f"Important plane detected {distance} km away! Aircraft ID: {aircraft['aircraftId']}. Group colors: {matches[0]['colors']}");
+        playsound('assets/chime.wav')
 
 for line in sys.stdin:
     msg = line.split(",")
