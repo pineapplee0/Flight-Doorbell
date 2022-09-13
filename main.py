@@ -1,5 +1,3 @@
-# validate the distFrom function's return values and made sure that they're accurate
-
 #library imports
 from playsound import playsound
 import sys
@@ -12,8 +10,6 @@ import config
 
 #create recentAircraft object
 recentAircraft = {}
-
-# MAKE AN AIRCRAFT CLASS
 
 #calculating distance of aircraft from homeCoords in km
 def distFrom(aircraft):
