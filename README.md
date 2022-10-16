@@ -12,7 +12,7 @@ Originally, I had planned on using FlightAware's API for Flight Doorbell. One of
 
 # How to set up Flight Doorbell
 
-This section is coming soon.
+This section is coming soon!
 
 # Parts List
 
