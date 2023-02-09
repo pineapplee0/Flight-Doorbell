@@ -28,6 +28,4 @@ Electrolytic apacitor - 10uF | $1.32/4
 Polyester film capacitor - 0.01uF | $1.64/4
 Assorted resistors - Bojack 100 pc | $14
 Perfboards - copper, 20pc | $6.79
-
-
-# Total ~ $159.52
+Total | ~ $157.33
