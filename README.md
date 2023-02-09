@@ -16,15 +16,18 @@ This section is coming soon!
 
 # Parts List
 
-- 5.5dBi 1090/978 N-Type Female Antenna 26 inch - $44.95
-- YOTENKO 49.2Ft RG58 coaxial cable N male to SMA male connector low-loss antenna extension cable - $19.69
-- DZS Elec 2pcs RG316 wire jumper 15cm SMA female to MCX male coaxial cable antenna adapter - $9.69
-- Realtek RTL2832U SDR - $22.95
-- Raspberry Pi 2b+ - $35
-- OSEPP RGB 10mm LED (10 pack) - $3.49
-- 2 10uf electrolytic capacitor $1.32/4
-- 2 0.01 uF polyester film capacitor/0.03 $1.64/4
-- Bojack 1000 Pcs 25 Values Resistor Kit (1 Ohm-1M Ohm with 5% 1/2W) Carbon Film Resistors Assortment $14
-- 20 Pcs Copper Perfboard Paper $6.79 
+Part Name                           | Price 
+------------------------------------|-----------------------------------
+Antenna - female connector, 26 inch | $44.95
+Antenna extension cable - male, 49ft | $19.70
+Coaxial antenna adapter - SMA female to MCX male | $9.70
+SDR - Realtek, RTL2832U | $22.95
+Raspberry Pi - 2b+ | $35
+RGB LED - OSEPP, 10 pack | $3.50
+Electrolytic apacitor - 10uF | $1.32/4
+Polyester film capacitor - 0.01uF | $1.64/4
+Assorted resistors - Bojack 100 pc | $14
+Perfboards - copper, 20pc | $6.79
 
-Total ~ $159.52
+
+# Total ~ $159.52
