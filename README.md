@@ -16,7 +16,7 @@ This section is coming soon!
 
 # Parts List
 
-Part Name                           | Price  | Where to Buy
+Part Name                           | Price  | Links
 ------------------------------------|--------|---------------------------
 Antenna - female connector, 26 inch | $44.95 | [Amazon](https://www.amazon.com/ADSBexchange-5-5dBi-N-Type-Female-Antenna/dp/B089Q4BVCB?pd_rd_w=AZgzG&pf_rd_p=8e4731a7-b756-4530-8014-2f681a6d39bb&pf_rd_r=DQSPVY4J7XR1PRR0AQN2&pd_rd_r=071d9d5d-8bc0-429f-82f5-0dfbb8c1b062&pd_rd_wg=3GJbW&pd_rd_i=B089Q4BVCB&psc=1&ref_=pd_bap_d_rp_6_i)
 Antenna extension cable - male, 49ft | $19.70 | [Amazon](https://www.amazon.com/YOTENKO-Connector-Pigtail-Antenna-Arrester/dp/B07T6LVRXY?pd_rd_w=AZgzG&pf_rd_p=8e4731a7-b756-4530-8014-2f681a6d39bb&pf_rd_r=DQSPVY4J7XR1PRR0AQN2&pd_rd_r=071d9d5d-8bc0-429f-82f5-0dfbb8c1b062&pd_rd_wg=3GJbW&pd_rd_i=B07T6LVRXY&psc=1&ref_=pd_bap_d_rp_4_t)
