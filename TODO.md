@@ -6,4 +6,6 @@ Include setup instructions.
 
 Include pip install for pydub in the final README or in setup instructions.
 
+Impliment "quiet hours" so the chime isnt triggered at ungodly hours of the night.
+
 
